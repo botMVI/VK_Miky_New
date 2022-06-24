@@ -8,14 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     @IBAction func buttonEnter(_ sender: Any) {
         
@@ -28,8 +27,4 @@ class ViewController: UIViewController {
         
         performSegue(withIdentifier: "Login", sender: nil)
     }
-    
-    
 }
-
-

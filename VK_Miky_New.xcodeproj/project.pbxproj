@@ -23,6 +23,7 @@
 		D5D45AD1286586D700F4A72F /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AD0286586D700F4A72F /* Groups.swift */; };
 		D5D45AD62865872C00F4A72F /* GroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AD52865872C00F4A72F /* GroupsCell.swift */; };
 		D5D45AD92865899800F4A72F /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AD82865899800F4A72F /* LoginExtension.swift */; };
+		D5D45ADB2865AD6000F4A72F /* CurrentFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45ADA2865AD6000F4A72F /* CurrentFriend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D5D45AD0286586D700F4A72F /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		D5D45AD52865872C00F4A72F /* GroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCell.swift; sourceTree = "<group>"; };
 		D5D45AD82865899800F4A72F /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
+		D5D45ADA2865AD6000F4A72F /* CurrentFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFriend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				D5D45AD2286586E800F4A72F /* Model */,
-				D5D45AD4286586F500F4A72F /* Controller */,
 				D5D45AD3286586F100F4A72F /* View */,
+				D5D45AD4286586F500F4A72F /* Controller */,
 				D5D45AC42865838200F4A72F /* SearchGroups */,
 			);
 			path = Groups;
@@ -139,8 +141,9 @@
 		D5D45AC32865836E00F4A72F /* CurrentFriend */ = {
 			isa = PBXGroup;
 			children = (
-				D5D45ACC2865860F00F4A72F /* Controller */,
+				D5D45ADC2865AD6400F4A72F /* Model */,
 				D5D45ACD2865862400F4A72F /* View */,
+				D5D45ACC2865860F00F4A72F /* Controller */,
 			);
 			path = CurrentFriend;
 			sourceTree = "<group>";
@@ -225,6 +228,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D5D45ADC2865AD6400F4A72F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5D45ADA2865AD6000F4A72F /* CurrentFriend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D45ACA2865855700F4A72F /* FriendsCell.swift in Sources */,
+				D5D45ADB2865AD6000F4A72F /* CurrentFriend.swift in Sources */,
 				D5D45ACF2865866700F4A72F /* CurrentFriendCell.swift in Sources */,
 				D5D45AD1286586D700F4A72F /* Groups.swift in Sources */,
 				D5D45AD62865872C00F4A72F /* GroupsCell.swift in Sources */,

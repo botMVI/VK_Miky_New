@@ -54,12 +54,11 @@ class FriendsTableVC: UITableViewController {
         }
     }
     
+    // MARK: Кнопка выхода к логину
     @IBAction func exitToLogin(_ sender: Any) {
-        print("exit")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = storyBoard.instantiateViewController(identifier: "LoginVC") as! ViewController
         self.present(loginVC, animated: true)
     }
-    
 }
 

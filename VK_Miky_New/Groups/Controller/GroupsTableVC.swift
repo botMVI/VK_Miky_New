@@ -33,7 +33,6 @@ class GroupsTableVC: UITableViewController {
         return groups.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell",
@@ -46,6 +45,7 @@ class GroupsTableVC: UITableViewController {
 
         return cell
     }
+    
     // MARK: Добавляем группу из поиска
     @IBAction func addSelectGroup(segue: UIStoryboardSegue) {
         
@@ -66,6 +66,7 @@ class GroupsTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView,
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             groups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
