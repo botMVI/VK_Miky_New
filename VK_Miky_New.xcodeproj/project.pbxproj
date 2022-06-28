@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D528A165286B0E7A00ABE401 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528A164286B0E7A00ABE401 /* LikeControl.swift */; };
 		D5D45AA228657AEC00F4A72F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AA128657AEC00F4A72F /* AppDelegate.swift */; };
 		D5D45AA428657AEC00F4A72F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AA328657AEC00F4A72F /* SceneDelegate.swift */; };
 		D5D45AA628657AEC00F4A72F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AA528657AEC00F4A72F /* ViewController.swift */; };
@@ -24,9 +25,11 @@
 		D5D45AD62865872C00F4A72F /* GroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AD52865872C00F4A72F /* GroupsCell.swift */; };
 		D5D45AD92865899800F4A72F /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45AD82865899800F4A72F /* LoginExtension.swift */; };
 		D5D45ADB2865AD6000F4A72F /* CurrentFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D45ADA2865AD6000F4A72F /* CurrentFriend.swift */; };
+		D5E24974286AFDA2008AF1C0 /* AvatarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E24973286AFDA2008AF1C0 /* AvatarUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D528A164286B0E7A00ABE401 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		D5D45A9E28657AEC00F4A72F /* VK_Miky_New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_Miky_New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D45AA128657AEC00F4A72F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D45AA328657AEC00F4A72F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		D5D45AD52865872C00F4A72F /* GroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCell.swift; sourceTree = "<group>"; };
 		D5D45AD82865899800F4A72F /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		D5D45ADA2865AD6000F4A72F /* CurrentFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFriend.swift; sourceTree = "<group>"; };
+		D5E24973286AFDA2008AF1C0 /* AvatarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D45ABF2865834500F4A72F /* Friends.swift */,
+				D5E24973286AFDA2008AF1C0 /* AvatarUIView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D45ADA2865AD6000F4A72F /* CurrentFriend.swift */,
+				D528A164286B0E7A00ABE401 /* LikeControl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			files = (
 				D5D45ACA2865855700F4A72F /* FriendsCell.swift in Sources */,
 				D5D45ADB2865AD6000F4A72F /* CurrentFriend.swift in Sources */,
+				D528A165286B0E7A00ABE401 /* LikeControl.swift in Sources */,
 				D5D45ACF2865866700F4A72F /* CurrentFriendCell.swift in Sources */,
 				D5D45AD1286586D700F4A72F /* Groups.swift in Sources */,
 				D5D45AD62865872C00F4A72F /* GroupsCell.swift in Sources */,
@@ -319,6 +326,7 @@
 				D5D45AA228657AEC00F4A72F /* AppDelegate.swift in Sources */,
 				D5D45ABE2865832D00F4A72F /* GroupsTableVC.swift in Sources */,
 				D5D45AA428657AEC00F4A72F /* SceneDelegate.swift in Sources */,
+				D5E24974286AFDA2008AF1C0 /* AvatarUIView.swift in Sources */,
 				D5D45AD92865899800F4A72F /* LoginExtension.swift in Sources */,
 				D5D45ABC2865830F00F4A72F /* FriendsTableVC.swift in Sources */,
 			);

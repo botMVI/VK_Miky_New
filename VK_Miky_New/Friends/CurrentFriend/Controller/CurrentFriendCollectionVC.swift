@@ -53,7 +53,6 @@ class CurrentFriendCollectionVC: UICollectionViewController {
             preconditionFailure("Error")
         }
     
-        cell.currentFriendName.text = currentFriendArray[indexPath.row].name
         cell.currentFriendImage.image = currentFriendArray[indexPath.row].image
     
         return cell

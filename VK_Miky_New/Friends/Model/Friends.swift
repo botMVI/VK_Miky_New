@@ -14,10 +14,6 @@ struct Friends {
     
     let friend: [NewFriend]
 }
-//    init(name: String, image: UIImage? = nil){
-//        self.image = image
-//        self.name = name
-//    }
  
 struct NewFriend {
         let image: UIImage?
