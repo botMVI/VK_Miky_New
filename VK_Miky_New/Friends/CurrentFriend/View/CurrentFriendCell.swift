@@ -10,4 +10,5 @@ import UIKit
 class CurrentFriendCell: UICollectionViewCell {
     
     @IBOutlet weak var currentFriendImage: UIImageView!
+    @IBOutlet weak var currentFriendName: UILabel!
 }

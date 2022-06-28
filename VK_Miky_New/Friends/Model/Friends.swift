@@ -8,13 +8,22 @@
 import Foundation
 import UIKit
 
-class Friends {
-    
+struct Friends {
     let name: String
     var image: UIImage?
     
-    init(name: String, image: UIImage? = nil){
-        self.image = image
-        self.name = name
-    }
+    let friend: [NewFriend]
 }
+//    init(name: String, image: UIImage? = nil){
+//        self.image = image
+//        self.name = name
+//    }
+ 
+struct NewFriend {
+        let image: UIImage?
+        let name: String
+    }
+    
+let newFriend = [
+        NewFriend(image: UIImage(named: "avatar1"), name: "Fred")
+    ]

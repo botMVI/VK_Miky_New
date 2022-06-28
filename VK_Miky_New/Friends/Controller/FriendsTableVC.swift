@@ -10,11 +10,11 @@ import UIKit
 class FriendsTableVC: UITableViewController {
 
     let friends = [
-        Friends(name: "Игорь Ткач", image: UIImage(named: "avatar1")),
-        Friends(name: "Валерий Матко", image: UIImage(named: "avatar2")),
-        Friends(name: "Алексей Родинов", image: UIImage(named: "avatar4")),
-        Friends(name: "Мария Ивановна", image: UIImage(named: "avatar3")),
-        Friends(name: "Родион Петров", image: UIImage(named: "avatar5"))
+        Friends(name: "Игорь Ткач", image: UIImage(named: "avatar1"), friend: newFriend),
+        Friends(name: "Валерий Матко", image: UIImage(named: "avatar2"), friend: newFriend),
+        Friends(name: "Алексей Родинов", image: UIImage(named: "avatar4"), friend: newFriend),
+        Friends(name: "Мария Ивановна", image: UIImage(named: "avatar3"), friend: newFriend),
+        Friends(name: "Родион Петров", image: UIImage(named: "avatar5"), friend: newFriend)
     ]
     
     override func viewDidLoad() {
@@ -45,12 +45,23 @@ class FriendsTableVC: UITableViewController {
         return cell
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ShowCurrentFriend",
+//           let destinationVC = segue.destination as? CurrentFriendCollectionVC,
+//           let indexPath = tableView.indexPathForSelectedRow {
+//            let titleFriendName = friends[indexPath.row].name
+////            let currentFriendImage = friends[indexPath.row].image
+//            destinationVC.title = titleFriendName
+//            destinationVC.currentFriendArray = friends[indexPath.row].friend
+//        }
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowCurrentFriend",
            let destinationVC = segue.destination as? CurrentFriendCollectionVC,
            let indexPath = tableView.indexPathForSelectedRow {
-            let titleFriendName = friends[indexPath.row].name
-            destinationVC.title = titleFriendName
+            destinationVC.title = friends[indexPath.row].name
+            destinationVC.currentFriendArray = friends[indexPath.row].friend
         }
     }
     
@@ -61,4 +72,3 @@ class FriendsTableVC: UITableViewController {
         self.present(loginVC, animated: true)
     }
 }
-

@@ -11,7 +11,7 @@ private let reuseIdentifier = "Cell"
 
 class CurrentFriendCollectionVC: UICollectionViewController {
     
-//    var currentFriend = []
+    var currentFriendArray: [NewFriend] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,15 +45,16 @@ class CurrentFriendCollectionVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return currentFriendArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CurrentFriend", for: indexPath) as? CurrentFriendCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShowCurrentFriend", for: indexPath) as? CurrentFriendCell else {
             preconditionFailure("Error")
         }
     
-        // Configure the cell  
+        cell.currentFriendName.text = currentFriendArray[indexPath.row].name
+        cell.currentFriendImage.image = currentFriendArray[indexPath.row].image
     
         return cell
     }
