@@ -10,16 +10,17 @@ import UIKit
 
 struct Friends {
     let name: String
+    let lastName: String
     var image: UIImage?
     
-    let friend: [NewFriend]
+//    let friend: [NewFriend]
 }
  
-struct NewFriend {
-        let image: UIImage?
-        let name: String
-    }
-    
-let newFriend = [
-        NewFriend(image: UIImage(named: "avatar1"), name: "Fred")
-    ]
+//struct NewFriend {
+//        let image: UIImage?
+//        let name: String
+//    }
+//
+//let newFriend = [
+//    NewFriend(image: UIImage(named: "avatar1"), name: "Fred")
+//    ]

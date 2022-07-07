@@ -11,7 +11,8 @@ private let reuseIdentifier = "Cell"
 
 class CurrentFriendCollectionVC: UICollectionViewController {
     
-    var currentFriendArray: [NewFriend] = []
+    var currentFriendArray: [UIImage] = []
+    var avatarImage: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class CurrentFriendCollectionVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return currentFriendArray.count
+        return 10
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,7 +54,7 @@ class CurrentFriendCollectionVC: UICollectionViewController {
             preconditionFailure("Error")
         }
     
-        cell.currentFriendImage.image = currentFriendArray[indexPath.row].image
+        cell.currentFriendImage.image = avatarImage
     
         return cell
     }

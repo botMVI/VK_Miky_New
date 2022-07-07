@@ -16,9 +16,18 @@ class GroupsTableVC: UITableViewController {
         Groups(name: "Музыка", image: UIImage(named: "music")),
         Groups(name: "YouTube", image: UIImage(named: "youtube"))
     ]
+    
+    var groups2 = ["qweqwe","sdasd","zxczxc","fgdf","hjhk","hgjh","hjgfh"]
+    
+    var filteredGroups = [String]()
+    var isSearching = false
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.searchBar.delegate = self
     }
 
     // MARK: - Table view data source
@@ -30,7 +39,11 @@ class GroupsTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        if isSearching {
+            return filteredGroups.count
+        } else {
         return groups.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,8 +53,13 @@ class GroupsTableVC: UITableViewController {
             preconditionFailure("Error")
         }
         
+        if isSearching {
+            cell.groupName.text = filteredGroups[indexPath.row]
+        } else {
+        
         cell.groupName.text = groups[indexPath.row].name
         cell.groupImage.image = groups[indexPath.row].image
+        }
 
         return cell
     }
@@ -73,3 +91,4 @@ class GroupsTableVC: UITableViewController {
         }
     }
 }
+
