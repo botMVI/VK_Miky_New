@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51761BB2883E9FF004D81DB /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51761BA2883E9FF004D81DB /* AnimationVC.swift */; };
 		D528A165286B0E7A00ABE401 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528A164286B0E7A00ABE401 /* LikeControl.swift */; };
 		D528A168286B1D6500ABE401 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528A167286B1D6500ABE401 /* TabBarVC.swift */; };
 		D528A16A286B1F5D00ABE401 /* ConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528A169286B1F5D00ABE401 /* ConstraintsExtension.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51761BA2883E9FF004D81DB /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		D528A164286B0E7A00ABE401 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		D528A167286B1D6500ABE401 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		D528A169286B1F5D00ABE401 /* ConstraintsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsExtension.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51761B92883E9D6004D81DB /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				D51761BA2883E9FF004D81DB /* AnimationVC.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		D528A166286B1D4200ABE401 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D45AD72865897A00F4A72F /* Extensions */,
+				D51761B92883E9D6004D81DB /* Animation */,
 				D5D45AB728657E2E00F4A72F /* Login */,
 				D528A166286B1D4200ABE401 /* TabBar */,
 				D535E064287450CC002CA5EE /* News */,
@@ -357,6 +368,7 @@
 				D5622FFE28758A9F0025A201 /* NewsCell.swift in Sources */,
 				D5D45AC6286583A400F4A72F /* SearchGroupsTableVC.swift in Sources */,
 				D5D45AA228657AEC00F4A72F /* AppDelegate.swift in Sources */,
+				D51761BB2883E9FF004D81DB /* AnimationVC.swift in Sources */,
 				D5D45ABE2865832D00F4A72F /* GroupsTableVC.swift in Sources */,
 				D5D45AA428657AEC00F4A72F /* SceneDelegate.swift in Sources */,
 				D535E06A287454E2002CA5EE /* NewsTableVC.swift in Sources */,

@@ -448,6 +448,43 @@
             </objects>
             <point key="canvasLocation" x="1202" y="102"/>
         </scene>
+        <!--AnimationVC-->
+        <scene sceneID="r7A-nH-Qjt">
+            <objects>
+                <viewController id="fYz-hV-844" customClass="AnimationVC" customModule="VK_Miky_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2A-aV-Son">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-XB-B7i">
+                                <rect key="frame" x="112" y="253" width="62" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-aX-9O5">
+                                <rect key="frame" x="164" y="324" width="62" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-UC-YsR">
+                                <rect key="frame" x="216" y="253" width="62" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e9V-oA-PQI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationDot1" destination="Pk7-XB-B7i" id="G0q-oT-47I"/>
+                        <outlet property="animationDot2" destination="5ej-UC-YsR" id="iCc-DT-wi2"/>
+                        <outlet property="animationDot3" destination="zOZ-aX-9O5" id="yBU-Xr-5Xv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eV-ze-Cc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201.5384615384614" y="-1425.3554502369668"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="6fd-sE-OQj">
             <objects>
@@ -578,18 +615,18 @@
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
         <image name="VK" width="626" height="626"/>
-        <image name="arrow.up.message" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="heart" catalog="system" width="32" height="32"/>
-        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
-        <image name="message" catalog="system" width="32" height="32"/>
-        <image name="newspaper" catalog="system" width="32" height="32"/>
-        <image name="newspaper.fill" catalog="system" width="32" height="32"/>
-        <image name="person" catalog="system" width="32" height="32"/>
-        <image name="person.3" catalog="system" width="32" height="32"/>
-        <image name="person.3.fill" catalog="system" width="32" height="32"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
-        <image name="suit.heart" catalog="system" width="32" height="32"/>
+        <image name="arrow.up.message" catalog="system" width="128" height="113"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
