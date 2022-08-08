@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         button.setTitle("Войти", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        button.addTarget(self, action: #selector(tapButtonLogin), for: .touchUpInside)
+        button.addTarget(ViewController.self, action: #selector(tapButtonLogin), for: .touchUpInside)
         
         return button
     }()

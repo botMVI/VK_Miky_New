@@ -12,6 +12,7 @@ import UIKit
 class Session {
     
     static var shared = Session()
+    private init(){}
     
     let token: String = ""
     let userId: Int = 0
