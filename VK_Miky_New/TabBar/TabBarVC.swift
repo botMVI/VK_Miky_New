@@ -8,22 +8,16 @@
 import UIKit
 
 class TabBarVC: UITabBarController {
+    
+    let session = Session.shared
+    let services = Services()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        services.getFriends(token: session.token)
+        services.getPhotos(token: session.token)
+        services.getGroups(token: session.token)
+        services.getSerchedGroups(token: session.token)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
