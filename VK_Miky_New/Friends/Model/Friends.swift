@@ -8,19 +8,32 @@
 import Foundation
 import UIKit
 
-struct Friends {
-    let name: String
-    let lastName: String
+class FriendsResponse: Decodable {
+    let response: [FriendsItems]
+}
+
+class FriendsItems: Decodable {
+    let items: [FriendsModel]
+}
+
+class FriendsModel: Decodable {
+    var name: String = ""
+    var lastName: String = ""
     var image: UIImage?
     
-//    let friend: [NewFriend]
+    enum CodingKeys: String, CodingKey {
+        case name = "first_name"
+        case lastName = "last_name"
+        case image = "photo_100"
+    }
+    
+    convenience required init(from decoder: Decoder) throws {
+        self.init()
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.name = try values.decode(String.self, forKey: .name)
+        self.lastName = try values.decode(String.self, forKey: .lastName)
+    }
 }
- 
-//struct NewFriend {
-//        let image: UIImage?
-//        let name: String
-//    }
-//
-//let newFriend = [
-//    NewFriend(image: UIImage(named: "avatar1"), name: "Fred")
-//    ]
+

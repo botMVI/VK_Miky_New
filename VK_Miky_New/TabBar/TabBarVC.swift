@@ -15,7 +15,6 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        services.getFriends(token: session.token)
         services.getPhotos(token: session.token)
         services.getGroups(token: session.token)
         services.getSerchedGroups(token: session.token)

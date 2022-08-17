@@ -13,7 +13,7 @@ class Services {
     let baseURL = "https://api.vk.com/method"
     let session = Session.shared
     
-    func getFriends(token: String) {
+    func getFriends(token: String, completion: @escaping ([FriendsItems]) -> () ) {
         
         let url = baseURL + "/friends.get"
         let parametrs: Parameters = [
@@ -23,12 +23,18 @@ class Services {
             "fields": "city, country"
         ]
         
-        AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
-            print("Result :\(response)")
+        AF.request(url, method: .get, parameters: parametrs).responseJSON { res in
+            
+            guard let data = res.data else { return }
+            
+            let friends = try! JSONDecoder().decode(FriendsResponse.self, from: data)
+            completion(friends.response)
+            
+//            print("Result :\(response)")
         }
     }
     
-//https://api.vk.com/method/photos.get?user_ids=51398437&album_id=profile&access_token=vk1.a.-1xWErKmXzGG2T2cBPoELVja2cDTSfxY2aVQpeLJHrlIJ7Hcbl4weC5VIj8JfKBpCJAhd5xEuq-q6K0UlYRkMWQuaS_lpYynJDUZupWuBzp5eXAv3TwC8QEqopGJh5S6T6TXWrAHJojdifVH2AtfV-Oon6HA-88DM4Z1SEdTng2IJz4IjFwdKLdTjtlBpGt-&v=5.131
+
     func getPhotos(token: String) {
         
         let url = baseURL + "/photos.get"
@@ -41,7 +47,7 @@ class Services {
         ]
         
         AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
-            print("Result 2: \(response)")
+//            print("Result 2: \(response)")
         }
     }
     
@@ -56,7 +62,7 @@ class Services {
         ]
         
         AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
-            print("Result 3: \(response)")
+//            print("Result 3: \(response)")
         }
     }
     
@@ -66,14 +72,21 @@ class Services {
         let parametrs: Parameters = [
             "access_token": token,
             "v": "5.131",
-//            "user_ids": "\(session.userId)",
             "q": "Программирование Swift",
             "count": 10
         ]
         
         AF.request(url, method: .get, parameters: parametrs).responseJSON { response in
-            print("Result 4: \(response)")
+            
+            guard let data = response.data else {return}
+            
+//            print("Result 4: \(response)")
         }
     }
+    
+//    struct Users: Decodable {
+//
+//
+//    }
     
 }

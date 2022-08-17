@@ -72,7 +72,7 @@ extension VkLoginVC: WKNavigationDelegate {
             self.session.token = token
             tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarVC") as? TabBarVC
             self.view.insertSubview((tabBarVC?.view)!, at: 9)
-//            print(token)
+            print(token)
         }
     
     decisionHandler(.cancel)
